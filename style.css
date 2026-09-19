@@ -1,9 +1,4 @@
-/* ============================================================
-   style.css - Lab 01 and Lab 02
-   Loaded AFTER Bootstrap, so equal-specificity rules here win.
-   ============================================================ */
 
-/* ---------- STEP 9: background color, fonts, link and list styling ---------- */
 :root {
   --ink: #14262e;
   --muted: #4b6068;
@@ -45,8 +40,6 @@ a:focus-visible,
   outline: 3px solid var(--coral);
   outline-offset: 2px;
 }
-
-/* List styling: replace default bullets with small teal dots */
 .hobbies {
   list-style: none;
   padding-left: 0;
@@ -69,8 +62,6 @@ a:focus-visible,
   border-radius: 50%;
   background: var(--teal);
 }
-
-/* ---------- STEP 10: content as a "card" ---------- */
 .profile-card {
   width: 100%;
   max-width: 960px;
@@ -99,7 +90,6 @@ a:focus-visible,
   color: var(--muted);
 }
 
-/* ---------- STEP 16: navbar with flexbox ---------- */
 .site-nav {
   display: flex;
   justify-content: space-between;
@@ -118,8 +108,6 @@ a:focus-visible,
   color: #fff;
   text-decoration: underline;
 }
-
-/* ---------- STEP 15: button colors (built on Bootstrap's .btn variables) ---------- */
 .btn-brand {
   --bs-btn-color: #fff;
   --bs-btn-bg: var(--teal);
@@ -132,7 +120,6 @@ a:focus-visible,
   --bs-btn-active-border-color: var(--teal-dark);
 }
 
-/* ---------- STEP 21: CSS filter on an image, removed on :hover ---------- */
 .avatar-img {
   filter: grayscale(80%);
    width: 100%;
@@ -144,7 +131,6 @@ a:focus-visible,
   filter: none;
 }
 
-/* ---------- STEP 19: ::before quote mark ---------- */
 .pull-quote {
   position: relative;
   margin: 1.5rem 0;
@@ -164,8 +150,6 @@ a:focus-visible,
   line-height: 1;
   color: var(--coral);
 }
-
-/* ---------- Table styling (STEP 8 content) ---------- */
 .schedule-table {
   width: 100%;
   border-collapse: collapse;
@@ -194,8 +178,6 @@ a:focus-visible,
 .schedule-table tbody tr:nth-child(even) {
   background: #f3f7f5;
 }
-
-/* ---------- STEP 17: three cards in a row (Flexbox) ---------- */
 .skills-row {
   display: flex;
   gap: 1.25rem;
@@ -203,13 +185,11 @@ a:focus-visible,
 
 .skill-card {
   flex: 1;
-  position: relative; /* lets the NEW badge be positioned against this card */
+  position: relative; 
   padding: 1.5rem;
   background: #f3f7f5;
   border: 1px solid var(--line);
   border-radius: 12px;
-
-  /* STEP 20: transition makes the hover lift smooth */
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -222,14 +202,10 @@ a:focus-visible,
 .skill-card p {
   margin-bottom: 0;
 }
-
-/* STEP 20: hover effect (lift + slight scale) */
 .skill-card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 16px 28px rgba(20, 38, 46, 0.16);
 }
-
-/* STEP 18: "NEW" badge with position:absolute */
 .new-tag {
   position: absolute;
   top: -12px;
@@ -242,8 +218,6 @@ a:focus-visible,
   font-weight: 700;
   letter-spacing: 0.04em;
 }
-
-/* Stack the cards on phones */
 @media (max-width: 767.98px) {
   .skills-row {
     flex-direction: column;
@@ -258,7 +232,6 @@ a:focus-visible,
   color: var(--muted);
 }
 
-/* Respect people who turn off animations in their system settings */
 @media (prefers-reduced-motion: reduce) {
   .skill-card,
   .avatar-img {
